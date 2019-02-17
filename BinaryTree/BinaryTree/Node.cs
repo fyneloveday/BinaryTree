@@ -6,39 +6,17 @@ using System.Threading.Tasks;
 
 namespace BinaryTree
 {
-    class Node
+    public class Node
     {
-        private object data;
-        private Node next;
+        public int data;
+        public Node leftChild;
+        public Node rightChild;
 
-        public Node(object data, Node next)
+        public Node(int data)
         {
             this.data = data;
-            this.next = next;
+            leftChild = null;
+            rightChild = null;
         }
-
-        public object Data
-        {
-            get
-            {
-                return this.data;
-            }
-            set
-            {
-                this.data = value;
-            }
-         }
-        public Node Next
-        {
-            get
-            {
-                return this.next;
-            }
-            set
-            {
-                this.next = value;
-            }
-        }
-
     }
 }

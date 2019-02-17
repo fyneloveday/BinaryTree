@@ -8,16 +8,22 @@ namespace BinaryTree
 {
     class Binary_Tree
     {
-        Node left, right;
-        int data;
-        public Node(int data)
+        public Binary_Tree()
         {
-            this.data = data;
+            Node root = new Node();
+            Node temp = new Node();
+
+            while (root == null)
+            {
+                root = new Node;
+            }
         }
 
-        public void insert(int value)
+        public void insert(int data)
         {
-            if (value <= data)
+            Node Node = new Node(data);
+
+            if (data <= data)
             {
                 if (left == null)
                 {
@@ -70,6 +76,21 @@ namespace BinaryTree
                 }
             }
         }
+
+
+        public void printInOrder()
+        {
+            if (left != null)
+            {
+                left.printInOrder();
+            }
+            System.Out.printIn(data);
+            if (right != null)
+            {
+                right.printInOrder();
+            }
+        }
+
 
     }
 }
