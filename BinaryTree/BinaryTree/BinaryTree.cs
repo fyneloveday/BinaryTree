@@ -8,45 +8,43 @@ namespace BinaryTree
 {
     class Binary_Tree
     {
-        Node node = new Node();
-        Node temp;
-        temp = root;
-        public Binary_Tree(int data)
+        Node insert(Node root, int data)
         {
-            
-
+            Node node = new Node(data);
             if (root == null)
             {
-                root = new Node;
+                root = node;
             }
-        }
 
-        public void insert(int data)
-        {
-            Node Node = new Node(data);
-
-            if (data <= data)
+            Node current;
+            current = root;
+            while (root != null)
             {
-                if (left == null)
+                if (data <= current.data)
                 {
-                    left = new Node(value);
+                    if (Node.leftchild == null)
+                    {
+                        Node.leftChild = new Node(data);
+                    }
+                    else
+                    {
+                        left.insert(value);
+                    }
                 }
                 else
                 {
-                    left.insert(value);
+                    if (right == null)
+                    {
+                        right = new Node(value);
+                    }
+                    else
+                    {
+                        right.insert(value);
+                    }
                 }
             }
-            else
-            {
-                if (right == null)
-                {
-                    right = new Node(value);
-                }
-                else
-                {
-                    right.insert(value);
-                }
-            }
+
+           
         }
 
         public bool contains(int value)
@@ -93,6 +91,6 @@ namespace BinaryTree
             }
         }
 
-
+        }
     }
 }
